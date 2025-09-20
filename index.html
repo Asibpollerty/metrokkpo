@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Метро ККП — Кудряши • Приобский • Криводановка</title>
+
+  <!-- Красивая гарнитура -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="decor-blob"></div>
+  <header class="site-header">
+    <div class="brand">
+      <h1>Метро ККП</h1>
+      <p class="subtitle">Кудряши • Приобский • Криводановка</p>
+    </div>
+    <div class="actions">
+      <button id="highlightBtn" class="btn primary">Выделить линию</button>
+      <button id="resetBtn" class="btn">Сброс</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel lines-panel">
+      <h2 class="panel-title">Схема линий — прямая (станции на линии)</h2>
+
+      <!-- КРАСНАЯ (1) -->
+      <article class="line-card" data-line="1" style="--line-color:#D7263D;">
+        <div class="line-head"><div class="name">Красная линия — Кудряши</div><div class="meta">1998 · 7 станций</div></div>
+        <div class="track" id="line-1">
+          <div class="station" data-name="Ольховая"> <div class="dot"></div> <div class="label">Ольховая</div> </div>
+          <div class="station" data-name="Медик"> <div class="dot"></div> <div class="label">Медик</div> </div>
+          <div class="station" data-name="Спортивная"> <div class="dot"></div> <div class="label">Спортивная</div> </div>
+          <div class="station" data-name="Хуторок"> <div class="dot"></div> <div class="label">Хуторок</div> </div>
+          <div class="station" data-name="Железные врата"> <div class="dot"></div> <div class="label">Железные врата</div> </div>
+          <div class="station" data-name="Красная"> <div class="dot"></div> <div class="label">Красная</div> </div>
+          <div class="station" data-name="Волейбольная поляна"> <div class="dot"></div> <div class="label">Волейбольная поляна</div> </div>
+        </div>
+      </article>
+
+      <!-- ЗЕЛЁНАЯ (2) -->
+      <article class="line-card" data-line="2" style="--line-color:#2E8B57;">
+        <div class="line-head"><div class="name">Зелёная линия — Кудряши</div><div class="meta">2002 · 5 станций</div></div>
+        <div class="track" id="line-2">
+          <div class="station" data-name="Озёрная"><div class="dot"></div><div class="label">Озёрная</div></div>
+          <div class="station" data-name="Кривое озеро"><div class="dot"></div><div class="label">Кривое озеро</div></div>
+          <div class="station" data-name="Пляжная"><div class="dot"></div><div class="label">Пляжная</div></div>
+          <div class="station" data-name="Большая горка"><div class="dot"></div><div class="label">Большая горка</div></div>
+          <div class="station" data-name="Походная"><div class="dot"></div><div class="label">Походная</div></div>
+        </div>
+      </article>
+
+      <!-- СИНЯЯ (3) -->
+      <article class="line-card" data-line="3" style="--line-color:#1E90FF;">
+        <div class="line-head"><div class="name">Синяя линия — Приобский</div><div class="meta">2003 · 4 станции</div></div>
+        <div class="track" id="line-3">
+          <div class="station" data-name="Административная"><div class="dot"></div><div class="label">Административная</div></div>
+          <div class="station" data-name="Игровая"><div class="dot"></div><div class="label">Игровая</div></div>
+          <div class="station" data-name="Приобский центр"><div class="dot"></div><div class="label">Приобский центр</div></div>
+          <div class="station" data-name="Пятёрочная"><div class="dot"></div><div class="label">Пятёрочная</div></div>
+        </div>
+      </article>
+
+      <!-- РОЗОВАЯ (4) -->
+      <article class="line-card" data-line="4" style="--line-color:#FF6FB5;">
+        <div class="line-head"><div class="name">Розовая линия — Кудряши</div><div class="meta">2008 · 10 станций</div></div>
+        <div class="track" id="line-4">
+          <div class="station" data-name="Гастроном"><div class="dot"></div><div class="label">Гастроном</div></div>
+          <div class="station" data-name="Связист-2"><div class="dot"></div><div class="label">Связист-2</div></div>
+          <div class="station" data-name="Недра"><div class="dot"></div><div class="label">Недра</div></div>
+          <div class="station" data-name="Связист"><div class="dot"></div><div class="label">Связист</div></div>
+          <div class="station" data-name="Сосна"><div class="dot"></div><div class="label">Сосна</div></div>
+          <div class="station" data-name="Весна"><div class="dot"></div><div class="label">Весна</div></div>
+          <div class="station" data-name="Маяк"><div class="dot"></div><div class="label">Маяк</div></div>
+          <div class="station" data-name="Метеор"><div class="dot"></div><div class="label">Метеор</div></div>
+          <div class="station" data-name="Кошачья"><div class="dot"></div><div class="label">Кошачья</div></div>
+          <div class="station" data-name="Ивушка"><div class="dot"></div><div class="label">Ивушка</div></div>
+        </div>
+      </article>
+
+      <!-- ФИОЛЕТОВАЯ (5) -->
+      <article class="line-card" data-line="5" style="--line-color:#7B3FA0;">
+        <div class="line-head"><div class="name">Фиолетовая линия</div><div class="meta">2010 · 4 станции</div></div>
+        <div class="track" id="line-5">
+          <div class="station" data-name="Пивная"><div class="dot"></div><div class="label">Пивная</div></div>
+          <div class="station" data-name="Озерки"><div class="dot"></div><div class="label">Озерки</div></div>
+          <div class="station" data-name="Журналист-2"><div class="dot"></div><div class="label">Журналист-2</div></div>
+          <div class="station" data-name="Пляжная"><div class="dot"></div><div class="label">Пляжная</div></div>
+        </div>
+      </article>
+
+      <!-- ОРАНЖЕВАЯ (6) -->
+      <article class="line-card" data-line="6" style="--line-color:#FF8C42;">
+        <div class="line-head"><div class="name">Оранжевая линия</div><div class="meta">конец 2012 · 5 станций</div></div>
+        <div class="track" id="line-6">
+          <div class="station" data-name="Малороссийская"><div class="dot"></div><div class="label">Малороссийская</div></div>
+          <div class="station" data-name="Причал"><div class="dot"></div><div class="label">Причал</div></div>
+          <div class="station" data-name="Малая"><div class="dot"></div><div class="label">Малая</div></div>
+          <div class="station" data-name="Малороссийская-2"><div class="dot"></div><div class="label">Малороссийская-2</div></div>
+          <div class="station" data-name="Садовая"><div class="dot"></div><div class="label">Садовая</div></div>
+        </div>
+      </article>
+
+      <!-- СЕРАЯ (7) -->
+      <article class="line-card" data-line="7" style="--line-color:#6B7280;">
+        <div class="line-head"><div class="name">Серая линия — Криводановка</div><div class="meta">2017 · 7 станций</div></div>
+        <div class="track" id="line-7">
+          <div class="station" data-name="Кольцевая"><div class="dot"></div><div class="label">Кольцевая</div></div>
+          <div class="station" data-name="А-Мед"><div class="dot"></div><div class="label">А-Мед</div></div>
+          <div class="station" data-name="Торговый центр"><div class="dot"></div><div class="label">Торговый центр</div></div>
+          <div class="station" data-name="Звездочка"><div class="dot"></div><div class="label">Звездочка</div></div>
+          <div class="station" data-name="Торговая"><div class="dot"></div><div class="label">Торговая</div></div>
+          <div class="station" data-name="Калина Красная"><div class="dot"></div><div class="label">Калина Красная</div></div>
+          <div class="station" data-name="Поликлиника"><div class="dot"></div><div class="label">Поликлиника</div></div>
+        </div>
+      </article>
+
+      <!-- ЖЁЛТАЯ (8) -->
+      <article class="line-card" data-line="8" style="--line-color:#F6C000;">
+        <div class="line-head"><div class="name">Жёлтая линия</div><div class="meta">2025 · 3 станции</div></div>
+        <div class="track" id="line-8">
+          <div class="station" data-name="Памятная"><div class="dot"></div><div class="label">Памятная</div></div>
+          <div class="station" data-name="Храм"><div class="dot"></div><div class="label">Храм</div></div>
+          <div class="station" data-name="Гаражная"><div class="dot"></div><div class="label">Гаражная</div></div>
+        </div>
+      </article>
+
+    </section>
+
+    <aside class="panel history-panel">
+      <h2 class="panel-title">История и районы</h2>
+
+      <div class="timeline">
+        <div class="t-row"><div class="year">1993</div><div class="text">Начало строительства в Кудряшовском — первые проекты подземки.</div></div>
+        <div class="t-row"><div class="year">1998</div><div class="text">Открыта 1 — Красная линия: первые 7 станций (Ольховая, Медик, Спортивная, Хуторок, Железные врата, Красная, Волейбольная поляна).</div></div>
+        <div class="t-row"><div class="year">2002</div><div class="text">Построена Зелёная линия с пятью станциями.</div></div>
+        <div class="t-row"><div class="year">2003</div><div class="text">Открыта Синяя линия — на ней мало станций, но она важна, ведёт в Приобский (4 важные станции).</div></div>
+        <div class="t-row"><div class="year">2008</div><div class="text">Открыта Розовая линия — 10 станций; строительство заняло 5 лет; линия почти ведёт до Криводановки.</div></div>
+        <div class="t-row"><div class="year">2010</div><div class="text">Открыта Фиолетовая линия — 4 станции; сейчас самая мало посещаемая.</div></div>
+        <div class="t-row"><div class="year">конец 2012</div><div class="text">Оранжевая линия — 5 станций; уже почти рядом с Криводановкой.</div></div>
+        <div class="t-row"><div class="year">2017</div><div class="text">Построена Серая линия в Криводановке — 7 станций; почти самая загруженная и конечная.</div></div>
+        <div class="t-row"><div class="year">2025</div><div class="text">Открыта Жёлтая линия — конечная, не самая важная, но заметная по трафику.</div></div>
+      </div>
+
+      <div class="places">
+        <div class="place">
+          <h3>Кудряши</h3>
+          <p>Кудряшовское — район с быстрым ростом в конце XX века. Здесь началось строительство метро; станции крупные и рассчитаны на большие потоки.</p>
+        </div>
+        <div class="place">
+          <h3>Приобский</h3>
+          <p>Приобский — административный и культурный центр. Синяя линия (2003) связала район с промышленными зонами и центром.</p>
+        </div>
+        <div class="place">
+          <h3>Криводановка</h3>
+          <p>Криводановка — южный пригород; серая линия (2017) изменила транспортную карту: появилось развитие вдоль ветки.</p>
+        </div>
+      </div>
+
+      <div class="rank">
+        <h4>Рейтинг линий по перевозке пассажиров (1 — больше всего)</h4>
+        <ol>
+          <li>Красная</li>
+          <li>Серая</li>
+          <li>Розовая</li>
+          <li>Синяя</li>
+          <li>Зелёная</li>
+          <li>Оранжевая</li>
+          <li>Жёлтая</li>
+          <li>Фиолетовая</li>
+        </ol>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <p>Метро ККП — карта линий и история.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+  </html>
